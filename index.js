@@ -6,10 +6,46 @@ const searchPokemon= document.querySelector('#search-input')
 const numberFilter= document.querySelector('#number')
 const nameFilter= document.querySelector('#name')
 const notFoundMessage= document.querySelector('#not-found-message')
+const close = document.querySelector('search-close-icon')
 
 let allPokemon= [];
 
+searchPokemon.addEventListener("keyup", ()=>{
+        const searchTerm = searchPokemon.value.toLowerCase();
+        let filteredPokemons;
 
+        if(numberFilter.checked){
+            filteredPokemons= allPokemon.filter((pokemon)=>{
+
+                const pokemonId=pokemon.url.split("/")[6];
+                return pokemonId.startsWith(searchTerm);
+
+
+            });
+        }else if(nameFilter.checked){
+            filteredPokemons= allPokemon.filter((pokemon)=>{
+
+               return pokemon.name.toLowerCase().startsWith(searchTerm)
+
+            });
+      
+        }else{
+
+                filteredPokemons=allPokemon;
+
+        }
+
+        displayPokemon(filteredPokemons);
+
+        if(filteredPokemons.length===0){
+
+            notFoundMessage.style.display="block"
+
+        }else{
+            notFoundMessage.style.display="none"
+        }
+
+});
 
 // Funções
 const fetchPokemon =async()=>{
@@ -96,5 +132,8 @@ function displayPokemon(pokemon){
 
 
 }
+
+
+
 
 fetchPokemon()
