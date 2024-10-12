@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedex</title>
+    <!-- links -->
+    <link rel="stylesheet" href="index.css">
+
+
+</head>
+
+<body>
+
+    <main class="main">
+
+
+
+        <div class="header-home">
+
+            <div class="container">
+
+                <div class="logo-wrapper">
+
+                    <img src="assets/pokeball.svg" alt="pokeball">
+                    <h1>Pokedex</h1>
+
+                </div> <!-- logo-wrapper -->
+                <div class="search-wrapper">
+                    <div class="sreach-wrap">
+                        <img src="assets/search.svg" alt="search-icon" class="search-icon">
+                        <input type="text" class="search-input body3-fonts" placeholder="Search" id="search-input">
+                        <img src="assets/cross.svg" alt="cross" class="search-close-icon" id="search-close-icon">
+
+                     </div> <!-- sreach-wrap -->
+
+
+
+
+
+                </div> <!-- search-wrapper -->
+                <div class="sort-wrapper">
+                            <div class="sort-wrap">
+                                <img src="./assets/sorting.svg" alt="sort-icon" class="sort-icon" id="sort-icon">
+
+
+
+                            </div>  <!--sort-wrap  -->
+                          
+
+
+                </div> <!--sort-wrapper-->
+                 <div class="filter-wrapper">
+                        <p class="body2-fonts">Sort by:</p>
+                        <div class="filter-wrap">
+                                <div>
+                                    <input type="radio"  id="number" name="filters" value="number" checked>
+
+                                    <label for="number" class="body-3-fonts">Number</label>
+                                </div>
+
+                                <div>
+                                        <input type="radio" name="filters" id="name" value="name">
+                                        <label for="name" class="body3-fonts">Name</label>
+                                </div>
+
+                        </div>  <!--filter-wrap-->
+                          
+                 </div> <!--filter-wrapper-->
+                  
+
+
+            </div>
+            <!-- container -->
+
+
+        </div> <!-- header-home -->
+        <section class="pokemon-list">
+            <div class="container">
+                <div class="list-wrapper">
+
+
+                </div>   <!-- list-wrapper -->
+             
+
+
+            </div>   <!-- container -->
+            <div id="not-found-message">
+
+                        Pokemon not Found
+
+            </div> <!-- not-found-message -->
+            
+             
+
+        </section> <!-- pokemon-list-->
+           
+
+    </main> <!-- main -->
+
+
+<script src="index.js"></script>
+</body>
+
+</html>
